@@ -115,13 +115,13 @@ npm run dev
 Navigate to [http://localhost:5173](http://localhost:5173) to view your portfolio.
 
 ## 🔗 Links
-- **Live Demo**: [Link](https://itsmesoumya.netlify.app/)
+- **Live Demo**: [Link](https://soumya-123-code.github.io/itsmesoumya/#contact)
 - **GitHub Repository**: [Portfolio Repo](https://github.com/soumya-123-code/ReactJS-portfolio-website)
 
 **Author**
 <b><strong>Soumya Ranjan Nayak</strong></b>
-- Website - [Soumya Ranjan Nayak](https://itsmesoumya.netlify.app/)
-- LinkedIn - [Soumya Ranjan Nayak](https://www.linkedin.com/in/soumya-ranjan-nayak/)
+- Website - [Soumya Ranjan Nayak](https://soumya-123-code.github.io/itsmesoumya/#contact)
+- LinkedIn - [@soumya_ranjan](https://www.linkedin.com/in/soumya-ranjan-nayak-50069a15a)
 - Twitter - [@itsmesoumya](https://www.twitter.com/itsmesoumya)
 
 ## 🚀 More
