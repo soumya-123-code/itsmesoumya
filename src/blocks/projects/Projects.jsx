@@ -450,12 +450,11 @@ const cardData = [
     link: "https://github.com/SartHak-0-Sach/Finance-education_chatbot_application",
 }
 ];
-
 const SyledCard = styled(Card)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
   padding: 0,
-  height: '100%',
+  height: '100%', // Ensure the card takes full height
   backgroundColor: (theme.vars || theme).palette.background.paper,
   '&:hover': {
     backgroundColor: 'transparent',
@@ -466,8 +465,9 @@ const SyledCard = styled(Card)(({ theme }) => ({
     outlineColor: 'hsla(210, 98%, 48%, 0.5)',
     outlineOffset: '2px',
   },
+  // Set a minimum height for uniformity
+  minHeight: '350px', // Adjust this value as needed
 }));
-
 const SyledCardContent = styled(CardContent)({
   display: 'flex',
   flexDirection: 'column',
@@ -604,55 +604,90 @@ export default function Projects() {
         </Box>
       </Box>
       <Grid container spacing={2} mt={3}>
-        {filteredCards.map((project, index) => (
-          <Grid item xs={6} sm={4} md={3} key={index}>
-            <div style={{
-              padding: "20px",
-              borderRadius: "12px",
-              textAlign: "left",
-              padding: "16px",
-              color: "white"
-            }}>
-              <div className="skill-category" style={{
-                border: "1px solid var(--border)",
-                overflow: "hidden"
-              }} key={project.id}>
-                <div style={{
-                  width: "100%",
-                  height: "200px",
-                  overflow: "hidden"
-                }}>
-                  <img src={project.image} alt={project.title} style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover"
-                  }} />
-                </div>
-                <div style={{
-                  borderTop: "1px solid var(--border)",
-                  borderBottom: "1px solid var(--border)",
-                  padding: "8px",
-                  fontSize: "14px",
-                }}>
-                  <p>{project.tags.join(', ')}</p> {/* Displaying tags */}
-                </div>
-                <div style={{ marginBottom: "16px" }}>
-                  <h3>{project.title}</h3>
-                  <p>{project.description}</p>
-                  <div className="project-links">
-                    <a href={project.link} className="btn-outline" target="_blank" rel="noopener noreferrer">
-                      Live <span className="double-arrow">⟿</span>
-                    </a>
-                    <a href={project.github} className="btn-outline" target="_blank" rel="noopener noreferrer">
-                      GitHub <span className="arrow">→</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Grid>
-        ))}
-      </Grid>
+  {filteredCards.map((project, index) => (
+    <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
+      <div
+        style={{
+          borderRadius: "12px",
+          textAlign: "left",
+          color: "white",
+          minHeight: "auto",
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        <div
+          className="skill-category"
+          style={{
+            border: "1px solid var(--border)",
+            overflow: "hidden",
+            flexGrow: 1,
+            display: "flex",
+            flexDirection: "column",
+          }}
+          key={project.id}
+        >
+          <div
+            style={{
+              width: "100%",
+              height: "200px",
+              overflow: "hidden",
+            }}
+          >
+            <img
+              src={project.image}
+              alt={project.title}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+            />
+          </div>
+          <div
+            style={{
+              borderTop: "1px solid var(--border)",
+              borderBottom: "1px solid var(--border)",
+              padding: "8px",
+              fontSize: "14px",
+            }}
+          >
+            <p>{project.tags.join(", ")}</p>
+          </div>
+          <div style={{ padding: "16px", flexGrow: 1 }}>
+            <h5>{project.title}</h5>
+          </div>
+          <div
+            className="project-links"
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              padding: "8px 16px",
+            }}
+          >
+            <a
+              href={project.link}
+              className="btn-outline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Live <span className="double-arrow">⟿</span>
+            </a>
+            <a
+              href={project.github}
+              className="btn-outline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub <span className="arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </Grid>
+  ))}
+</Grid>
+
     </Box>
   );
 }

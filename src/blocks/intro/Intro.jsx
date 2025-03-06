@@ -20,23 +20,23 @@ export default function Intro() {
       </div>
 
       <div className="hero-content">
-        <div className="hero-text">
-          <h1 style={{color:"white"}}>
-            Elias is a <span className="accent">web designer</span> and<br />
-            <span className="accent">front-end developer</span>
-          </h1>
-          <p className="hero-description">
-            He crafts responsive websites where technologies<br />
-            meet creativity
-          </p>
-          <button className="btn-primary">Contact me !!</button>
-        </div>
+      <div className="hero-text">
+  <h1 style={{ color: "white" }}>
+    Hi, I'm <span className="accent">Soumya</span> — a passionate <br />
+    <span className="accent">Front-End Developer & UI Designer</span>
+  </h1>
+  <p className="hero-description">
+    I build responsive, user-friendly websites that seamlessly blend <br />
+    design and functionality to create engaging digital experiences.
+  </p>
+  <button className="btn-primary">Let's Connect!</button>
+</div>
 
         <div className="hero-image">
           <img src="assets/header_img.png" alt="Elias in a hoodie" />
-          <div className="status-badge">
+          <div className="status-badge" style={{color :"white"}}>
             <div className="status-dot"></div>
-            <p>Currently working on <span className="bold">Portfolio</span></p>
+            <p>Crafting <span className="bold">My Digital Space ✨</span></p>
           </div>
           <div className="geometric-element rect-1">
           <img src="assets/hero_sub.png" alt="Elias in a hoodie" />
