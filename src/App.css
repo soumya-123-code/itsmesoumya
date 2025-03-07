@@ -140,7 +140,7 @@ nav ul li a.active {
 .hero {
   display: flex;
   align-items: center;
-  padding: 80px 0 40px;
+  /* 40px; */
   position: relative;
 }
 
@@ -216,7 +216,7 @@ nav ul li a.active {
 
 /* Quote section */
 .quote {
-  padding: 80px 0;
+  
   display: flex;
   justify-content: center;
 }
@@ -289,7 +289,7 @@ nav ul li a.active {
 
 /* Projects section */
 .projects {
-  padding: 80px 0;
+  
 }
 
 .projects-grid {
@@ -339,7 +339,7 @@ nav ul li a.active {
 
 /* Skills section */
 .skills {
-  padding: 80px 0;
+  
   position: relative;
 }
 
@@ -429,7 +429,7 @@ nav ul li a.active {
 
 /* About Me section */
 .about-me {
-  padding: 80px 0;
+  
 }
 
 .about-content {
@@ -468,7 +468,7 @@ nav ul li a.active {
 
 /* Contacts section */
 .contacts {
-  padding: 80px 0;
+  
   position: relative;
 }
 

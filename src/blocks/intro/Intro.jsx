@@ -12,42 +12,34 @@ export default function Intro() {
 
   return (
     <Container maxWidth="xl">
-  <section className="hero" id="home">
-      <div className="social-links">
-        <a href="#" className="social-icon"><i className="fa-brands fa-github"></i></a>
-        <a href="#" className="social-icon"><i className="fa-brands fa-discord"></i></a>
-        <a href="#" className="social-icon"><i className="fa-brands fa-twitter"></i></a>
-      </div>
-
-      <div className="hero-content">
-      <div className="hero-text">
-  <h1 style={{ color: "white" }}>
-    Hi, I'm <span className="accent">Soumya</span> — a passionate <br />
-    <span className="accent">Front-End Developer & UI Designer</span>
-  </h1>
-  <p className="hero-description">
-    I build responsive, user-friendly websites that seamlessly blend <br />
-    design and functionality to create engaging digital experiences.
-  </p>
-  <button className="btn-primary">Let's Connect!</button>
-</div>
-
-        <div className="hero-image">
-          <img src="assets/header_img.png" alt="Elias in a hoodie" />
-          <div className="status-badge" style={{color :"white"}}>
-            <div className="status-dot"></div>
-            <p>Crafting <span className="bold">My Digital Space ✨</span></p>
-          </div>
-          <div className="geometric-element rect-1">
-          <img src="assets/hero_sub.png" alt="Elias in a hoodie" />
-          </div>
-          <div className="geometric-element dot-pattern-1">
-          <img src="assets/Dots.png" alt="Elias in a hoodie" />
-          </div>
+   
+   
+        <div style={{ display: "flex", justifyContent: "center", alignItems: "center",flexDirection:"column" }}>
+          <img
+            src="assets/hero4x.png"
+            alt="soumya in a hoodie"
+            style={{
+              maxWidth: "100%",
+              height: "auto",
+              maxHeight: "70vh",
+              marginRight:74
+            }}
+          />
+          <img
+            src="assets/herotext1x.png"
+            alt="soumya in a hoodie"
+            style={{
+              maxWidth: "90%",
+              height: "auto",
+              maxHeight: "60vh", 
+              marginTop:-30
+            }}
+          />
         </div>
-      </div>
-    </section>
+     <div> </div>
+
   </Container>
+  
   );
 }
 

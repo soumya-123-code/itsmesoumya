@@ -64,8 +64,10 @@ const Dashboard = () => {
 
           {/* Title */}
           <Typography variant="h6" sx={{ flexGrow: 1, textAlign: isMobile ? "center" : "left" }}>
-            Soumya's Portfolio
-          </Typography>
+  ITS<span style={{ color: "purple" }}>me</span>
+  <span style={{ color: "#e62070" }}>Soumya</span>
+</Typography>
+
 
           {/* Desktop Navigation */}
           {!isMobile && (
@@ -100,7 +102,8 @@ const Dashboard = () => {
       >
         <Box sx={{ padding: 2 }}>
           <Typography variant="h6" sx={{ marginBottom: 2 }}>
-            Soumya's Portfolio
+          ITS<span style={{ color: "purple" }}>me</span>
+  <span style={{ color: "#e62070" }}>Soumya</span>
           </Typography>
           <List>
             {sections.map((section) => (

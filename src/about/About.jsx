@@ -40,7 +40,7 @@ export default function About() {
 
         <div className="about-content" style={{ color: '#fff' }}>
           <Grid container spacing={4} alignItems="center">
-            <Grid item xs={12} md={6}>
+            <Grid item xs={12} md={12}>
               <div className="about-text">
                 <Typography variant="h5">Hello, I'm Soumya!</Typography>
                 <Typography paragraph>
@@ -55,21 +55,12 @@ export default function About() {
                
               </div>
             </Grid>
-            <Grid item xs={12} md={6}>
-              <div className="about-image">
-                <img 
-                  src="assets/aboutme.png" 
-                  alt="Soumya profile" 
-                  style={{ maxWidth: '300px', height: 'auto', borderRadius: '8px' }} 
-                />
-                <div className="dot-pattern-4">
-                  <img src="assets/Dots.png" alt="Dot pattern" style={{ maxWidth: '100%' }} />
-                </div>
-              </div>
-            </Grid>
+          
           </Grid>
         </div>
       </section>
     </Container>
   );
 }
+
+
