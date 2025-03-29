@@ -1,128 +1,70 @@
-import React, { useEffect, useState } from "react";
-import { Box, Typography, Container, Grid, useMediaQuery } from "@mui/material";
+import React from "react";
+import { useTheme } from "@mui/material/styles";
+import { Box, Button, Typography, useMediaQuery } from "@mui/material";
+import { makeStyles } from "@mui/styles";
 
-const textOptions = ["React.js", "React Native", "Full Stack Development"];
-
-
-
-
-export default function Intro() {
-
- 
-
-  return (
-    <Container maxWidth="xl">
-   
-   
-        <div style={{ display: "flex", justifyContent: "center", alignItems: "center",flexDirection:"column" }}>
-          <img
-            src="assets/hero4x.png"
-            alt="soumya in a hoodie"
-            style={{
-              maxWidth: "100%",
-              height: "auto",
-              maxHeight: "70vh",
-              marginRight:74
-            }}
-          />
-          <img
-            src="assets/herotext1x.png"
-            alt="soumya in a hoodie"
-            style={{
-              maxWidth: "90%",
-              height: "auto",
-              maxHeight: "60vh", 
-              marginTop:-30
-            }}
-          />
-        </div>
-     <div> </div>
-
-  </Container>
-  
-  );
-}
-
-
-const styles = {
-  hero: {
-    display: 'flex',
-    alignItems: 'center',
-    padding: '80px 0 40px',
-    position: 'relative',
-  },
-  socialLinks: {
-    position: 'fixed',
-    left: '20px',
-    top: '50%',
-    transform: 'translateY(-50%)',
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '16px',
-  },
-  socialIcon: {
-    fontSize: '20px',
-    transition: 'color 0.3s',
-  },
-  heroContent: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    width: '100%',
-  },
-  heroText: {
-    fontSize: '32px',
-    marginBottom: '32px',
-    lineHeight: 1.2,
-  },
-  heroDescription: {
-    color: '#abb2bf',
-    marginBottom: '32px',
-  },
-  buttonPrimary: {
-    background: 'transparent',
-    color: '#fff',
-    border: '1px solid #c778dd',
-    padding: '8px 16px',
-    cursor: 'pointer',
-    fontFamily: "'Fira Code', monospace",
-    transition: 'background-color 0.3s',
+// Define Styles
+const useStyles = makeStyles((theme) => ({
+  container: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
+    backgroundColor: theme.palette.background.default,
+    // padding: "20px",
   },
   heroImage: {
-    position: 'relative',
+    maxWidth: "100%",
+    height: "auto",
+    maxHeight: "100vh",
+    // marginRight: (props) => (props.isMobile ? 50 : 144),
   },
-  statusBadge: {
-    position: 'absolute',
-    bottom: '16px',
-    left: 0,
-    backgroundColor: '#191919',
-    border: '1px solid #c778dd',
-    padding: '8px 16px',
-    display: 'flex',
-    alignItems: 'center',
-    gap: '8px',
+  heroTextImage: {
+    // maxWidth: (props) => (props.isMobile ? "80%" : "90%"),
+    height: "auto",
+    // maxHeight: "60vh",
+    // marginTop: (props) => (props.isMobile ? -18 : -105),
+    // marginLeft: 10,
   },
-  statusDot: {
-    width: '12px',
-    height: '12px',
-    backgroundColor: '#c778dd',
-    borderRadius: '50%',
+  description: {
+    color: theme.palette.text.primary,
+    textAlign: "center",
+    marginTop: 16,
   },
-  geometricElement: {
-    position: 'absolute',
-    width: "160px",
-    height: "100px",
-    /* border: 1px solid var(--accent); */
-    top:" 94px",
-    left:" -175px"
+  button: {
+    color: theme.palette.primary.main,
+    borderColor: theme.palette.primary.main,
+    marginTop: 24,
+    padding: "8px 16px",
+    fontFamily: "'Fira Code', monospace",
+    "&:hover": {
+      backgroundColor: theme.palette.primary.light,
+      color: theme.palette.background.default,
+    },
   },
-  accent: {
-    color: '#c778dd',
-  },
-  bold: {
-    fontWeight: 700,
-  },
+}));
+
+export default function Intro() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const classes = useStyles({ isMobile });
+
+  // Switch images based on theme mode
+  const heroImageSrc = theme.palette.mode === "dark" ? "assets/hero4x.png":"assets/hero4xdark.png" ;
+  const heroTextSrc = theme.palette.mode === "dark" ? "assets/herotextdark.png" : "assets/herotext1x.png";
+const width=isMobile?'190vw':'130vw'
+  return (
+    <Box className={classes.container}>
+      {/* Hero Image */}
+      <Box
+        component="img"
+        src={heroImageSrc}
+        alt="soumya in a hoodie"
+        style={{width:width,height:"inherit"}}
+      />
   
-};
-
-
+    </Box>
+        // width: 190vw;
+        // height: inherit;
+  );
+}

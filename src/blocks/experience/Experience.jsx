@@ -7,7 +7,8 @@ import {
   ListItem,
   ListItemText,
   Chip,
-  Box,
+  Box,useTheme,Grid2,
+  useMediaQuery
 } from "@mui/material";
 
 // Experience data
@@ -95,9 +96,15 @@ const experienceData = [
   
 
 // Extract unique company names for filtering
+
+
 const uniqueCompanies = [...new Set(experienceData.map((exp) => exp.company))];
 
 const Experience = () => {
+  const theme = useTheme();
+  const isDarkMode = theme.palette.mode === "dark";
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
   const [selectedCompany, setSelectedCompany] = useState(uniqueCompanies[0]);
 
   const handleChipClick = (company) => {
@@ -109,19 +116,43 @@ const Experience = () => {
   );
 
   return (
-    <section style={{
-      padding: '40px 20px',
-      backgroundColor: '#1e1e1e',
-      color: '#fff'
-    }}>
-      <div className="section-header">
-        <h2 style={{ color: '#fff' }}>
-          <span className="accent">#</span> Work Experience
-        </h2>
-      </div>
+    <Box
+      id="experience"
+      sx={{
+        py: isMobile ? 0.2 : 6,
+        px: isMobile ? 0.2 : 4,
+        bgcolor: "background.paper",
+        color: "text.primary",
+        borderRadius: "8px",
+        boxShadow: (theme) =>
+          `0 8px 32px ${theme.palette.mode === "dark" ? "rgba(0, 0, 0, 0.3)" : "rgba(0, 0, 0, 0.1)"}`,
+        margin: isMobile ? "10px auto":"40px auto",
+      }}
+    >
+      <Typography
+        variant="h4"
+        gutterBottom
+        sx={{
+          fontWeight: 600,
+          position: "relative",
+          display: "inline-block",
+          marginBottom: "30px",
+          "&::after": {
+            content: '""',
+            position: "absolute",
+            bottom: "-10px",
+            left: 0,
+            width: "60%",
+            height: "3px",
+            background: "linear-gradient(90deg, #c778dd, transparent)",
+          },
+        }}
+      >
+        <span style={{ color: "#c778dd" }}>#</span> Work Experience
+      </Typography>
 
-      {/* Company Selection Tabs */}
-      <Box sx={{ display: "flex", justifyContent: "center", gap: "10px", flexWrap: "wrap", mb: 3 }}>
+      {/* Company Selection Chips */}
+      <Box sx={{ display: 'flex', flexDirection: 'row', gap: 2, overflowX: 'auto', mt: 3, p: 1, width: '100%' }}>
         {uniqueCompanies.map((company) => (
           <Chip
             key={company}
@@ -132,9 +163,11 @@ const Experience = () => {
               fontWeight: selectedCompany === company ? "bold" : "normal",
               cursor: "pointer",
               fontSize: "14px",
-              backgroundColor: selectedCompany === company ?  "#c778dd" : "rgba(0, 0, 0, 0.6)",
-         
-              color: "#fff" // Ensure chip text is readable
+              backgroundColor: selectedCompany === company ? "#c778dd" : "rgba(0, 0, 0, 0.6)",
+              color: "#fff",
+              "&:hover": {
+                backgroundColor: selectedCompany === company ? "#a76bbd" : "rgba(0, 0, 0, 0.8)",
+              },
             }}
           />
         ))}
@@ -142,58 +175,58 @@ const Experience = () => {
 
       {/* Experience Card */}
       {selectedExperience && (
-        <div style={{
-          padding: "20px", 
+  <Card sx={{ borderRadius: "12px", overflow: "hidden", boxShadow: 3,background:"transparent",border:".5px solid"}}>
+  <CardContent>
+    <Typography variant="h5" sx={{ color: isDarkMode ? "#fff" : "#000", mb: 1 }}>
+      {selectedExperience.company}
+    </Typography>
+    <Typography variant="body1" sx={{ color: isDarkMode ? "#ccc" : "#555", mb: 1 }}>
+      {selectedExperience.role} | {selectedExperience.duration}
+    </Typography>
+    <Typography variant="body2" sx={{ color: isDarkMode ? "#aaa" : "#333", mb: 2 }}>
+      {selectedExperience.location}
+    </Typography>
 
-          borderRadius: "12px",
-          textAlign: "left", 
-        
-          padding: "16px",
-        
-        }}>
-          <div className="skill-category">
-            <h3 style={{ color: '#fff' }}> {selectedExperience.company}</h3>
-            <ul style={{ color: '#fff' }}>
-              <li>{selectedExperience.role} | {selectedExperience.duration}</li>
-              <li>{selectedExperience.location}</li>
+    {selectedExperience.client && (
+      <Typography variant="body2" sx={{ color: isDarkMode ? "#aaa" : "#333", mb: 1 }}>
+        <strong>Client:</strong> {selectedExperience.client}
+      </Typography>
+    )}
+    {selectedExperience.project && (
+      <Typography variant="body2" sx={{ color: isDarkMode ? "#aaa" : "#333", mb: 1 }}>
+        <strong>Project:</strong> {selectedExperience.project}
+      </Typography>
+    )}
 
-              {selectedExperience.client && (
-                <li><strong>Client:</strong> {selectedExperience.client}</li>
-              )}
-              {selectedExperience.project && (
-                <li><strong>Project:</strong> {selectedExperience.project}</li>
-              )}
+    {selectedExperience.projects && (
+      <>
+        <Typography variant="body2" sx={{ color: isDarkMode ? "#aaa" : "#333", mb: 1 }}>
+          <strong>Projects:</strong>
+        </Typography>
+        <List sx={{ paddingLeft: 2, marginBottom: 2 }}>
+          {selectedExperience.projects.map((project, i) => (
+            <ListItem key={i} sx={{ padding: 0 }}>
+              <ListItemText primary={`• ${project}`} />
+            </ListItem>
+          ))}
+        </List>
+      </>
+    )}
 
-              {selectedExperience.projects && (
-                <>
-                  <li style={{ fontWeight: "bold" }}>
-                    Projects:
-                  </li>
-                  <ul style={{ color: '#fff' }}>
-                    {selectedExperience.projects.map((project, i) => (
-                      <li key={i}>
-                        <ListItemText primary={`• ${project}`} />
-                      </li>
-                    ))}
-                  </ul>
-                </>
-              )}
-
-              <li style={{ fontWeight: "bold" }}>
-                Key Responsibilities:
-              </li>
-              <ul style={{ color: '#fff' }}>
-                {selectedExperience.tasks.map((task, i) => (
-                  <li key={i}>
-                    <ListItemText primary={`✔ ${task}`} />
-                  </li>
-                ))}
-              </ul>
-            </ul>
-          </div>
-        </div>
+    <Typography variant="body2" sx={{ color: isDarkMode ? "#aaa" : "#333", mb: 1 }}>
+      <strong>Key Responsibilities:</strong>
+    </Typography>
+    <List sx={{ paddingLeft: 2 }}>
+      {selectedExperience.tasks.map((task, i) => (
+        <ListItem key={i} sx={{ padding: 0 }}>
+          <ListItemText primary={`✔ ${task}`} />
+        </ListItem>
+      ))}
+    </List>
+  </CardContent>
+</Card>
       )}
-    </section>
+    </Box>
   );
 };
 

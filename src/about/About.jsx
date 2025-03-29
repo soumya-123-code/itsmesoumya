@@ -1,30 +1,31 @@
 import React, { useEffect, useState } from "react";
-import { Box, Typography, Container, Grid, Button } from "@mui/material";
+import { Box, Typography, Container, Grid } from "@mui/material";
 
+// Text options to be typed out
 const textOptions = ["React.js", "React Native", "Full Stack Development"];
 
 export default function About() {
-  const [currentText, setCurrentText] = useState("");
-  const [textIndex, setTextIndex] = useState(0);
-  const [charIndex, setCharIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
+  const [currentText, setCurrentText] = useState(""); // The text being typed out
+  const [textIndex, setTextIndex] = useState(0); // The current index of the text options
+  const [charIndex, setCharIndex] = useState(0); // The index of the character being typed
+  const [isDeleting, setIsDeleting] = useState(false); // Whether we're deleting or typing
 
   useEffect(() => {
     const currentString = textOptions[textIndex];
     const timeout = setTimeout(() => {
       if (isDeleting) {
-        setCurrentText(currentString.substring(0, charIndex - 1));
+        setCurrentText(currentString.substring(0, charIndex - 1)); // Delete character
         setCharIndex(charIndex - 1);
       } else {
-        setCurrentText(currentString.substring(0, charIndex + 1));
+        setCurrentText(currentString.substring(0, charIndex + 1)); // Add character
         setCharIndex(charIndex + 1);
       }
 
       if (!isDeleting && charIndex === currentString.length) {
-        setIsDeleting(true);
+        setIsDeleting(true); // Start deleting when the word is fully typed
       } else if (isDeleting && charIndex === 0) {
-        setIsDeleting(false);
-        setTextIndex((textIndex + 1) % textOptions.length);
+        setIsDeleting(false); // Stop deleting and start typing the next text
+        setTextIndex((textIndex + 1) % textOptions.length); // Move to the next text option
       }
     }, isDeleting ? 50 : 150);
 
@@ -32,35 +33,53 @@ export default function About() {
   }, [currentText, charIndex, isDeleting, textIndex]);
 
   return (
-    <Container maxWidth="xl">
-      <section className="about-me" id="about-me">
-        <div className="section-header">
-          <h2 style={{ color: '#fff' }}><span className="accent">#</span> about-me</h2>
-        </div>
+    <div>
+      {/* Section header */}
 
-        <div className="about-content" style={{ color: '#fff' }}>
-          <Grid container spacing={4} alignItems="center">
-            <Grid item xs={12} md={12}>
-              <div className="about-text">
-                <Typography variant="h5">Hello, I'm Soumya!</Typography>
-                <Typography paragraph>
-                  I'm a passionate front-end developer based in the vibrant city of Kyiv, Ukraine. My journey into web development began with a curiosity for technology and a desire to create. Over the years, I have honed my skills in crafting responsive and visually stunning websites that provide seamless user experiences.
-                </Typography>
-                <Typography paragraph>
-                  I specialize in utilizing <span style={{ color: '#c778dd' }}>{currentText}</span> to bring ideas to life. My approach combines creativity with technical expertise, allowing me to transform concepts into engaging digital solutions. I believe that every pixel matters, and I strive to create interfaces that not only look great but also function flawlessly.
-                </Typography>
-                <Typography paragraph>
-                  With a commitment to continuous learning, I stay updated with the latest trends and technologies in the industry. I thrive on challenges and enjoy collaborating with clients to help them establish a strong online presence. My goal is to make the web a more beautiful and functional place, one project at a time.
-                </Typography>
-               
-              </div>
-            </Grid>
-          
-          </Grid>
-        </div>
-      </section>
-    </Container>
+
+            <Typography 
+              variant="h4" 
+              gutterBottom 
+              sx={{ 
+                fontWeight: 600,
+                position: "relative",
+                display: "inline-block",
+                marginBottom: "30px",
+                "&::after": {
+                  content: '""',
+                  position: "absolute",
+                  bottom: "-10px",
+                  left: 0,
+                  width: "60%",
+                  height: "3px",
+                  background: "linear-gradient(90deg, #c778dd, transparent)"
+                }
+              }}
+            >
+              <span style={{ color: "#c778dd" }}>#</span>  about-me
+            </Typography>
+
+      {/* About content */}
+      <div className="about-content">
+  <Grid container spacing={2} alignItems="center">
+    <Grid item xs={12} md={12}>
+      <div className="about-text">
+        {/* Introduction Text */}
+        <Typography variant="h5">Hello, I'm Soumya!</Typography>
+        <Typography paragraph>
+          I'm a passionate Full-Stack Developer with over 5 years of experience, specializing in React.js and React Native. My journey into web development started with a deep curiosity for technology and a desire to build impactful digital experiences.
+        </Typography>
+        <Typography paragraph>
+          I specialize in <span style={{ color: '#c778dd' }}>{currentText}</span>, bringing ideas to life with a perfect blend of creativity and technical expertise. From crafting sleek, responsive UI designs to optimizing backend performance, I focus on creating seamless digital solutions that are both visually appealing and highly functional.
+        </Typography>
+        <Typography paragraph>
+          With a strong commitment to continuous learning, I stay ahead of industry trends, embracing new technologies and innovative approaches. I thrive on challenges and love collaborating with teams and clients to develop high-quality applications that enhance user experience and business growth.
+        </Typography>
+      </div>
+    </Grid>
+  </Grid>
+</div>
+
+    </div>
   );
 }
-
-

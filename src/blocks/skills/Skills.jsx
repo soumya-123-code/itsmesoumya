@@ -1,6 +1,6 @@
 import React from "react";
 import { Chip } from "@mui/material";
-import { AppBar, Toolbar, IconButton,Grid, Typography, Button, Drawer, List, ListItem, ListItemText, useMediaQuery, CssBaseline, Menu, MenuItem, Box, Container } from "@mui/material";
+import { Grid, Typography, useTheme, Box,useMediaQuery } from '@mui/material';
 
 const skills = {
   languages: [
@@ -37,13 +37,46 @@ const skills = {
 };
 
 export default function Skills() {
+  const theme = useTheme();
+  const isDarkMode = theme.palette.mode === 'dark'; // Check if the current theme is dark mode
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   return (
-    <section style={styles.skills}>
-    <div className="section-header">
-      <h2>
-        <span className="accent">#</span>skills
-      </h2>
-    </div>
+    <Box 
+      id="contacts" 
+sx={{ 
+
+  py:isMobile?0.2:6, 
+  px:isMobile?0.2: 4, 
+        bgcolor: "background.paper", // Uses theme background
+        color: "text.primary", // Uses theme text color
+        borderRadius: "8px",
+        boxShadow: (theme) => `0 8px 32px ${theme.palette.mode === 'dark' ? 'rgba(0, 0, 0, 0.3)' : 'rgba(0, 0, 0, 0.1)'}`,
+        margin: "40px auto",
+      
+      }}
+    >
+
+      <Typography 
+        variant="h4" 
+        gutterBottom 
+        sx={{ 
+          fontWeight: 600,
+          position: "relative",
+          display: "inline-block",
+          marginBottom: "30px",
+          "&::after": {
+            content: '""',
+            position: "absolute",
+            bottom: "-10px",
+            left: 0,
+            width: "60%",
+            height: "3px",
+            background: "linear-gradient(90deg, #c778dd, transparent)"
+          }
+        }}
+      >
+        <span style={{ color: "#c778dd" }}>#</span> skills
+      </Typography>
 
       <Grid container spacing={2} mt={3}>
         <Grid item xs={12} md={4}>
@@ -55,12 +88,18 @@ export default function Skills() {
           <Grid container spacing={2}>
             {Object.entries(skills).map(([category, skillsList], index) => (
               <Grid item xs={12} sm={6} md={4} key={index} style={styles.skillCategory}>
-                <h3 style={styles.categoryTitle}>
+                <Typography variant="h6" style={{ ...styles.categoryTitle, color: isDarkMode ? '#fff' : '#000' }}>
                   {category.charAt(0).toUpperCase() + category.slice(1)}
-                </h3>
+                </Typography>
                 <ul style={styles.skillsList}>
                   {skillsList.map((skill, skillIndex) => (
-                    <li key={skillIndex} style={styles.skillItem}>
+                    <li
+                      key={skillIndex}
+                      style={{
+                        ...styles.skillItem,
+                        backgroundColor: isDarkMode ? '#282c34' : '#e0e0e0',
+                      }}
+                    >
                       {`${skill.emoji} ${skill.name}`}
                     </li>
                   ))}
@@ -70,22 +109,17 @@ export default function Skills() {
           </Grid>
         </Grid>
       </Grid>
-    </section>
+    </Box>
   );
 }
 
 const styles = {
-  skills: {
-    padding: '40px 20px',
-    backgroundColor: '#1e1e1e',
-    color: '#fff',
-  },
   sectionHeader: {
     textAlign: 'center',
     marginBottom: '20px',
   },
-  accent: {
-    color: '#c778dd',
+  sectionTitle: {
+    fontSize: '2rem',
   },
   skillsImage: {
     maxWidth: '100%',
@@ -98,24 +132,16 @@ const styles = {
   categoryTitle: {
     marginBottom: '10px',
     fontSize: '1.5rem',
-    color: '#c778dd',
   },
   skillsList: {
     listStyleType: 'none',
     padding: 0,
   },
   skillItem: {
-    backgroundColor: '#282c34',
     padding: '10px',
     borderRadius: '5px',
     marginBottom: '5px',
     transition: 'background-color 0.3s',
   },
-};
-
-// Add hover effect using JavaScript
-const skillItemHoverStyle = {
-  backgroundColor: '#c778dd',
-  color: '#1e1e1e',
 };
 
