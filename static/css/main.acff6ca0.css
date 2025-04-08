@@ -1,3 +1,0 @@
-@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap);:root{--font-primary:"Poppins",sans-serif!important}body,h1,h2,h3,h4,h5,h6{font-family:Poppins,sans-serif!important;font-family:var(--font-primary)!important}h1,h2,h3,h4,h5,h6{font-weight:700}p{font-family:Poppins,sans-serif!important;font-family:var(--font-primary)!important;font-weight:400}Base styles and variables
-:root{--background:#191919;--secondary-bg:#24242b;--text:#fff;--accent:#c778dd;--secondary-text:#abb2bf;--border:#565656}
-/*# sourceMappingURL=main.acff6ca0.css.map*/
