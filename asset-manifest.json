@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/itsmesoumya/static/css/main.fa4c52db.css",
-    "main.js": "/itsmesoumya/static/js/main.17963dfc.js",
-    "static/js/848.7081fe4c.chunk.js": "/itsmesoumya/static/js/848.7081fe4c.chunk.js",
+    "main.js": "/itsmesoumya/static/js/main.ff417d7d.js",
+    "static/js/848.c9aae37d.chunk.js": "/itsmesoumya/static/js/848.c9aae37d.chunk.js",
     "static/js/300.6338b63f.chunk.js": "/itsmesoumya/static/js/300.6338b63f.chunk.js",
     "static/js/458.5c939bc6.chunk.js": "/itsmesoumya/static/js/458.5c939bc6.chunk.js",
     "static/js/448.65fc47a8.chunk.js": "/itsmesoumya/static/js/448.65fc47a8.chunk.js",
@@ -14,11 +14,11 @@
     "static/js/185.ded60f21.chunk.js": "/itsmesoumya/static/js/185.ded60f21.chunk.js",
     "static/js/261.c92a65bd.chunk.js": "/itsmesoumya/static/js/261.c92a65bd.chunk.js",
     "static/js/268.427b7e60.chunk.js": "/itsmesoumya/static/js/268.427b7e60.chunk.js",
-    "static/js/133.f64e2a12.chunk.js": "/itsmesoumya/static/js/133.f64e2a12.chunk.js",
+    "static/js/533.cee4e2f6.chunk.js": "/itsmesoumya/static/js/533.cee4e2f6.chunk.js",
     "index.html": "/itsmesoumya/index.html",
     "main.fa4c52db.css.map": "/itsmesoumya/static/css/main.fa4c52db.css.map",
-    "main.17963dfc.js.map": "/itsmesoumya/static/js/main.17963dfc.js.map",
-    "848.7081fe4c.chunk.js.map": "/itsmesoumya/static/js/848.7081fe4c.chunk.js.map",
+    "main.ff417d7d.js.map": "/itsmesoumya/static/js/main.ff417d7d.js.map",
+    "848.c9aae37d.chunk.js.map": "/itsmesoumya/static/js/848.c9aae37d.chunk.js.map",
     "300.6338b63f.chunk.js.map": "/itsmesoumya/static/js/300.6338b63f.chunk.js.map",
     "458.5c939bc6.chunk.js.map": "/itsmesoumya/static/js/458.5c939bc6.chunk.js.map",
     "448.65fc47a8.chunk.js.map": "/itsmesoumya/static/js/448.65fc47a8.chunk.js.map",
@@ -30,10 +30,10 @@
     "185.ded60f21.chunk.js.map": "/itsmesoumya/static/js/185.ded60f21.chunk.js.map",
     "261.c92a65bd.chunk.js.map": "/itsmesoumya/static/js/261.c92a65bd.chunk.js.map",
     "268.427b7e60.chunk.js.map": "/itsmesoumya/static/js/268.427b7e60.chunk.js.map",
-    "133.f64e2a12.chunk.js.map": "/itsmesoumya/static/js/133.f64e2a12.chunk.js.map"
+    "533.cee4e2f6.chunk.js.map": "/itsmesoumya/static/js/533.cee4e2f6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fa4c52db.css",
-    "static/js/main.17963dfc.js"
+    "static/js/main.ff417d7d.js"
   ]
 }
