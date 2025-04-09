@@ -212,38 +212,38 @@ const GridPattern = styled(Box)(({ theme, animated }) => ({
   }
 }));
 
-// Skills data with hex colors for visual enhancement
+// Updated skills data with more relevant and interactive emojis
 const skillsData = {
   languages: [
-    { name: "HTML", emoji: "🌐", color: "#E34F26", rgb: "227, 79, 38", level: 90 },
-    { name: "CSS", emoji: "🎨", color: "#1572B6", rgb: "21, 114, 182", level: 85 },
-    { name: "JavaScript", emoji: "⚡", color: "#F7DF1E", rgb: "247, 223, 30", level: 80 },
-    { name: "TypeScript", emoji: "🛠️", color: "#3178C6", rgb: "49, 120, 198", level: 75 },
+    { name: "HTML", emoji: "📄", color: "#E34F26", rgb: "227, 79, 38", level: 90 },
+    { name: "CSS", emoji: "🎭", color: "#1572B6", rgb: "21, 114, 182", level: 85 },
+    { name: "JavaScript", emoji: "🔮", color: "#F7DF1E", rgb: "247, 223, 30", level: 80 },
+    { name: "TypeScript", emoji: "🛡️", color: "#3178C6", rgb: "49, 120, 198", level: 75 },
     { name: "Python", emoji: "🐍", color: "#3776AB", rgb: "55, 118, 171", level: 70 },
   ],
   frameworks: [
     { name: "React", emoji: "⚛️", color: "#61DAFB", rgb: "97, 218, 251", level: 90 },
-    { name: "React Native", emoji: "📱", color: "#61DAFB", rgb: "97, 218, 251", level: 80 },
-    { name: "Django", emoji: "🐍", color: "#092E20", rgb: "9, 46, 32", level: 75 },
+    { name: "React Native", emoji: "📲", color: "#61DAFB", rgb: "97, 218, 251", level: 80 },
+    { name: "Django", emoji: "🏗️", color: "#092E20", rgb: "9, 46, 32", level: 75 },
   ],
   databases: [
     { name: "PostgreSQL", emoji: "🐘", color: "#336791", rgb: "51, 103, 145", level: 85 },
-    { name: "SQL", emoji: "🗄️", color: "#4479A1", rgb: "68, 121, 161", level: 80 },
-    { name: "MySQL", emoji: "🐬", color: "#4479A1", rgb: "68, 121, 161", level: 75 },
-    { name: "NoSQL", emoji: "📂", color: "#4DB33D", rgb: "77, 179, 61", level: 70 },
+    { name: "SQL", emoji: "🏛️", color: "#4479A1", rgb: "68, 121, 161", level: 80 },
+    { name: "MySQL", emoji: "💾", color: "#4479A1", rgb: "68, 121, 161", level: 75 },
+    { name: "NoSQL", emoji: "🧩", color: "#4DB33D", rgb: "77, 179, 61", level: 70 },
   ],
   tools: [
-    { name: 'Share Hosting', emoji: '📡', color: '#795548', rgb: "121, 85, 72", level: 85 },
-    { name: 'Visual Studio', emoji: '🖥️', color: '#007ACC', rgb: "0, 122, 204", level: 90 },
-    { name: 'Sublime Text', emoji: '📝', color: '#FF9800', rgb: "255, 152, 0", level: 80 },
+    { name: 'Share Hosting', emoji: '🌐', color: '#795548', rgb: "121, 85, 72", level: 85 },
+    { name: 'Visual Studio', emoji: '🧰', color: '#007ACC', rgb: "0, 122, 204", level: 90 },
+    { name: 'Sublime Text', emoji: '⚡', color: '#FF9800', rgb: "255, 152, 0", level: 80 },
   ],
   cloud: [
     { name: "Azure", emoji: "☁️", color: "#0089D6", rgb: "0, 137, 214", level: 75 },
     { name: "Digital Ocean", emoji: "🌊", color: "#0080FF", rgb: "0, 128, 255", level: 80 },
   ],
   os: [
-    { name: "Mac", emoji: "🍏", color: '#607D8B', rgb: "96, 125, 139", level: 85 },
-    { name: "Windows", emoji: "🖥️", color: '#0078D6', rgb: "0, 120, 214", level: 90 },
+    { name: "Mac", emoji: "🍎", color: '#607D8B', rgb: "96, 125, 139", level: 85 },
+    { name: "Windows", emoji: "🪟", color: '#0078D6', rgb: "0, 120, 214", level: 90 },
     { name: "Linux", emoji: "🐧", color: '#FCC624', rgb: "252, 198, 36", level: 75 },
   ],
 };

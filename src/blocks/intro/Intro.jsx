@@ -58,7 +58,7 @@ export default function Intro() {
 /> */}
       <Box
         component="img"
-        src={`${process.env.PUBLIC_URL}/heroImageSrc`}
+        src={`${process.env.PUBLIC_URL}/${heroImageSrc}`}
         alt="soumya in a hoodie"
         style={{width: width, height: "inherit",marginLeft:-44}}
         loading="lazy"
