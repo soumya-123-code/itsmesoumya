@@ -50,9 +50,15 @@ export default function Intro() {
   return (
     <Box className={classes.container}>
       {/* Hero Image - Fixed path with leading slash */}
+      {/* <img 
+  src={`${process.env.PUBLIC_URL}/assets/tech-icons/react-small.svg`} 
+  alt="React" 
+  width="22" 
+  height="22" 
+/> */}
       <Box
         component="img"
-        src={heroImageSrc}
+        src={`${process.env.PUBLIC_URL}/heroImageSrc`}
         alt="soumya in a hoodie"
         style={{width: width, height: "inherit",marginLeft:-44}}
         loading="lazy"

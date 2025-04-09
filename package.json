@@ -3,6 +3,7 @@
   "name": "myportfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://soumya-123-code.github.io/itsmesoumya/",
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@emotion/react": "^11.14.0",
