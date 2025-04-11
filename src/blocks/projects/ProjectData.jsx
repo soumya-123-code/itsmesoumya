@@ -363,8 +363,8 @@ export const projectsData =[
       ],
       category: "web app",
       github:
-        "https://github.com/SartHak-0-Sach/SurgiPlanPRO-Hospital_management_app",
-      link: "https://github.com/SartHak-0-Sach/SurgiPlanPRO-Hospital_management_app",
+        "https://github.com/soumya-123-code/SurgiPlanPRO-Hospital_management_app-main",
+      link: "https://github.com/soumya-123-code/SurgiPlanPRO-Hospital_management_app-main",
     },
     {
       id: 23,
