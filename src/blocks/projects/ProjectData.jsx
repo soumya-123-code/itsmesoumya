@@ -342,8 +342,8 @@ export const projectsData =[
         "Feedforward Neural Network",
       ],
       category: "machine learning",
-      github: "https://github.com/SartHak-0-Sach/NLP_chatbot_application",
-      link: "https://github.com/SartHak-0-Sach/NLP_chatbot_application",
+      github: "",
+      link: "",
     },
     {
       id: 22,
@@ -367,27 +367,6 @@ export const projectsData =[
       link: "https://github.com/soumya-123-code/SurgiPlanPRO-Hospital_management_app-main",
     },
     {
-      id: 23,
-      title: "PULSE-Social media application",
-      description:
-        "A full stack social media application with a redesigned look, user interaction to community management, technical implementation, and various features, including nested deep comments, notifications, real-time-search, and much more.",
-      image:
-        "https://res.cloudinary.com/dhjxadhrs/image/upload/v1733300141/c82e477d-49f2-40f1-a696-69fe9b4f7e1a.png",
-      tags: [
-        "NextJS",
-        "Clerk",
-        "NextJS app router",
-        "MongoDB",
-        "Tailwind CSS",
-        "Zod",
-        "Typescript",
-        "ShadCN",
-      ],
-      category: "web app",
-      github: "https://github.com/SartHak-0-Sach/Pulse-social_media_application",
-      link: "https://github.com/SartHak-0-Sach/Pulse-social_media_application",
-    },
-    {
       id: 24,
       title: "Instagram web scraping app",
       description:
@@ -396,8 +375,8 @@ export const projectsData =[
         "https://res.cloudinary.com/dhjxadhrs/image/upload/v1733043394/active-states_s1rkhz.jpg",
       tags: ["python", "jupyter notebook", "selenium webdriver", "web-scraping"],
       category: "selenium",
-      github: "https://github.com/SartHak-0-Sach/Selenium_web-scraping_project",
-      link: "https://github.com/SartHak-0-Sach/Selenium_web-scraping_project",
+      github: "",
+      link: "",
     },
     {
       id: 25,
@@ -409,8 +388,8 @@ export const projectsData =[
       tags: ["vanilla JavaScript", "KaboomJS", "vercel-deployment"],
       category: "games",
       github:
-        "https://github.com/SartHak-0-Sach/Space-invaders-arcade-game-clone",
-      link: "https://github.com/SartHak-0-Sach/Space-invaders-arcade-game-clone",
+        "",
+      link: "",
     },
     {
       id: 26,
@@ -421,8 +400,8 @@ export const projectsData =[
         "https://res.cloudinary.com/dhjxadhrs/image/upload/v1733044154/86d4190a-57bc-47f7-b410-2fc273ad9496.png",
       tags: ["C++", "Raylib library", "MinGW GCC compiler"],
       category: "games",
-      github: "https://github.com/SartHak-0-Sach/Tetris",
-      link: "https://github.com/SartHak-0-Sach/Tetris",
+      github: "",
+      link: "",
     },
     {
       id: 27,
@@ -434,8 +413,8 @@ export const projectsData =[
       tags: ["HTML", "CSS", "Vanilla JavaScript", "Chrome API"],
       category: "chrome extension",
       github:
-        "https://github.com/SartHak-0-Sach/Video_timestamp_bookmark_chrome-extension",
-      link: "https://github.com/SartHak-0-Sach/Video_timestamp_bookmark_chrome-extension",
+        "",
+      link: "",
     },
     {
       id: 28,
@@ -453,8 +432,8 @@ export const projectsData =[
         "Dall-E image generation",
       ],
       category: "android app",
-      github: "https://github.com/SartHak-0-Sach/Voice_assistant_app_ReactNative",
-      link: "https://github.com/SartHak-0-Sach/Voice_assistant_app_ReactNative",
+      github: "",
+      link: "",
     },
     {
       id: 29,
@@ -466,8 +445,8 @@ export const projectsData =[
       tags: ["nextJS", "metamask", "solidity contracts", "hardhat", "dapp"],
       category: "blockchain",
       github:
-        "https://github.com/SartHak-0-Sach/VOTEX-blockchain-based_decentralized_voting_application",
-      link: "https://github.com/SartHak-0-Sach/VOTEX-blockchain-based_decentralized_voting_application",
+        "https://github.com/soumya-123-code/VOTEX-blockchain-based_decentralized_voting_application",
+      link: "https://github.com/soumya-123-code/VOTEX-blockchain-based_decentralized_voting_application",
     },
     {
       id: 30,
@@ -478,8 +457,8 @@ export const projectsData =[
         "https://res.cloudinary.com/dhjxadhrs/image/upload/v1733060658/active-states_tctj9m.jpg",
       tags: ["python", "selenium webdriver", "xml", "excel"],
       category: "selenium",
-      github: "https://github.com/SartHak-0-Sach/Whatsapp_automation-testing_bot",
-      link: "https://github.com/SartHak-0-Sach/Whatsapp_automation-testing_bot",
+      github: "",
+      link: "",
     },
     {
       id: 31,
@@ -500,8 +479,8 @@ export const projectsData =[
       ],
       category: "machine learning",
       github:
-        "https://github.com/SartHak-0-Sach/WhatsApp_chat_analyzer_NLP_project",
-      link: "https://github.com/SartHak-0-Sach/WhatsApp_chat_analyzer_NLP_project",
+        "",
+      link: "",
     },
     {
       id: 32,
@@ -561,7 +540,7 @@ export const projectsData =[
       ],
       category: "machine learning",
       github:
-        "https://github.com/SartHak-0-Sach/Finance-education_chatbot_application",
-      link: "https://github.com/SartHak-0-Sach/Finance-education_chatbot_application",
+        "",
+      link: "",
     },
   ];
