@@ -21,7 +21,7 @@ export const AppProvider = ({ children }) => {
 
   const [isDarkMode, setIsDarkMode] = useState(getInitialThemeMode);
   const [animationsEnabled, setAnimationsEnabled] = useState(true);
-  const [isLoading, setIsLoading] = useState(true);bb
+  const [isLoading, setIsLoading] = useState(true);
   // Theme object
   const theme = isDarkMode ? createDarkTheme() : createLightTheme();
 
