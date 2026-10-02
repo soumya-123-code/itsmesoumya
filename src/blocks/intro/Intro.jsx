@@ -44,7 +44,7 @@ export default function Intro() {
   const classes = useStyles({ isMobile });
 
   // Switch images based on theme mode
-  const heroImageSrc = theme.palette.mode === "dark" ? "/assets/hero4xdark-tcs.png" : "/assets/hero4x-tcs.png";
+  const heroImageSrc = theme.palette.mode === "dark" ? "/assets/hero4xdark-tcs-v2.png" : "/assets/hero4x-tcs-v2.png";
   const width = isMobile ? '200vw' : '130vw';
 
   return (
