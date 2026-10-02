@@ -28,6 +28,13 @@ const AppContent = () => {
     if (metaThemeColor) {
       metaThemeColor.setAttribute('content', theme.palette.primary.main);
     }
+
+    const pageBackground = theme.palette.mode === 'dark'
+      ? '#10051d'
+      : theme.palette.background.default;
+    document.documentElement.style.backgroundColor = pageBackground;
+    document.body.style.backgroundColor = pageBackground;
+    document.getElementById('root').style.backgroundColor = pageBackground;
   }, [theme]);
 
   return (
