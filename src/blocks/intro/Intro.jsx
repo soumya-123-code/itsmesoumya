@@ -43,6 +43,17 @@ export default function Intro() {
         >
           Hello! I Am <Box component="span" sx={{ color: "#9d55f6" }}>Soumya</Box>
         </Box>
+        {theme.palette.mode === "light" && (
+          <Box
+            component="svg"
+            viewBox="0 0 1453 862"
+            aria-hidden="true"
+            sx={{ position: "absolute", inset: 0, width: "100%", height: "100%", pointerEvents: "none" }}
+          >
+            <path d="M 635 80 C 585 88, 530 120, 482 171" fill="none" stroke="#8d48ed" strokeWidth="2.6" strokeLinecap="round" />
+            <path d="M 482 171 L 487 146 M 482 171 L 507 165" fill="none" stroke="#8d48ed" strokeWidth="2.6" strokeLinecap="round" />
+          </Box>
+        )}
       </Box>
       <Box
         sx={{
