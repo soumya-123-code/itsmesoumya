@@ -25,8 +25,8 @@ export default function Intro() {
         alt="Soumya holding a MacBook"
         sx={{
           display: "block",
-          width: { xs: "175vw", sm: "140vw", md: "min(100%, 1450px)" },
-          maxWidth: "none",
+          width: { xs: "100%", sm: "88vw", md: "min(72vw, 950px)" },
+          maxWidth: "100%",
           height: "auto",
         }}
       />
