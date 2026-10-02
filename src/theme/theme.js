@@ -32,7 +32,7 @@ const colors = {
   lightBorder: '#e0e7ff',
   
   // Dark mode specific colors
-  darkBackground: '#161925',
+  darkBackground: '#10051d',
   darkSecondaryBackground: '#1e2235',
   darkText: '#ffffff',
   darkSecondaryText: '#b6c0d0',
