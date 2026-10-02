@@ -50,7 +50,7 @@ export default function Intro() {
               <path d="M 96 43 L 109 50 L 99 61" fill="none" stroke={palette.line} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
             </Box>
             <Box sx={{ width: { xs: 205, md: 230 }, height: { xs: 205, md: 230 }, borderRadius: "50%", overflow: "hidden", display: "flex", alignItems: "end", justifyContent: "center", bgcolor: palette.avatar, border: `1px solid ${palette.line}`, boxShadow: `0 0 0 15px ${dark ? "rgba(72, 27, 128, .20)" : "rgba(153, 104, 245, .10)"}, 0 15px 48px ${palette.glow}` }}>
-              <Box component="img" src={`${process.env.PUBLIC_URL}/assets/soumya-hero-profile-v6.png`} alt="Soumya holding a laptop" sx={{ width: "105%", maxWidth: "none", transform: "translate(1%, 7%)" }} />
+              <Box component="img" src={`${process.env.PUBLIC_URL}/assets/soumya-hero-profile-v7.png`} alt="Soumya holding a laptop" sx={{ width: "105%", maxWidth: "none", transform: "translate(1%, 7%)" }} />
             </Box>
           </Box>
 
