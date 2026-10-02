@@ -24,7 +24,7 @@ const textOptions = [
 ];
 
 // Resume PDF path - update this to your actual resume file path
-const RESUME_PATH = "/assets/Soumya_Resume.pdf";
+const RESUME_PATH = "/assets/Soumya_Ranjan_Nayak_CV_2025.pdf";
 
 // Styled components for animations
 const AnimatedBox = styled(Box)(
@@ -327,7 +327,7 @@ const About = memo(() => {
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = RESUME_PATH;
-    link.download = "Soumya_Resume_2025.pdf";
+    link.download = "Soumya_Ranjan_Nayak_CV_2025.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -429,11 +429,11 @@ const About = memo(() => {
   // Educational & Professional Timeline with emojis
   const timelineData = [
     {
-      title: "Senior Software Developer | Team Lead",
-      organization: "WovvTech",
-      period: "2021 – Present",
+      title: "Software Developer",
+      organization: "Tata Consultancy Services (TCS)",
+      period: "Aug 2025 – Present",
       description:
-        "Leading UI development with React.js and React Native for client projects. Mentoring junior developers and conducting code reviews.",
+        "Migrating the Virgin Media O2 Booking Move / Movers Journey from Angular to Next.js with React, TypeScript, Storyblok, and API-driven frontend development.",
       emoji: "👨‍💻", // Developer emoji
     },
     {

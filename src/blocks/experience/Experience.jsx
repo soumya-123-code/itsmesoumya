@@ -28,22 +28,23 @@ import { sectionHeaderStyles, sectionContainerStyles } from "../../theme/theme";
 // Experience data
 const experienceData = [
   {
-    company: "WovvTech",
-    role: "Senior Software Developer | Team Lead",
-    duration: "Jan 2021 – Present",
-    location: "Rourkela, Odisha",
-    client: "Builder.ai",
-    project: "InitialFinalBuild – Social Events App",
-    icon: "💻",
-    color: "#7540EE", // A vibrant purple
+    company: "Tata Consultancy Services (TCS)",
+    role: "Software Developer",
+    duration: "Aug 2025 – Present",
+    location: "Kolkata, India",
+    client: "Virgin Media O2",
+    project: "Booking Move / Movers Journey – Angular to Next.js Migration",
+    logo: "/assets/tcs-logo.png",
+    color: "#087CC1",
     tasks: [
-      "Developed UI from Figma designs using React Native & React.js",
-      "Conducted code reviews, optimized performance, and fixed bugs",
-      "Mentored junior developers, ensuring smooth onboarding",
-      "Managed team tasks and led UI development activities",
+      "Developing and migrating UI components from Angular to Next.js using React and TypeScript",
+      "Implementing responsive, reusable frontend components for the customer journey",
+      "Integrating frontend applications with backend APIs and data-driven workflows",
+      "Working with Storyblok CMS for content-driven UI development",
+      "Writing unit tests with Vitest and Jest and supporting GitLab CI/CD workflows",
     ],
-    skills: ["React.js", "React Native", "JavaScript", "TypeScript", "UI/UX", "Team Leadership"],
-    achievements: ["Improved app performance by 30%", "Mentored 5 junior developers"],
+    skills: ["Next.js", "React", "TypeScript", "Storyblok", "REST APIs", "Vitest", "Jest", "GitLab"],
+    achievements: ["Modernizing the Virgin Media O2 customer booking journey", "Creating reusable, tested frontend components"],
     category: "Work"
   },
   {
@@ -503,8 +504,17 @@ const Experience = () => {
                       <Box sx={{ position: 'relative' }}>
                         {/* Company and role */}
                         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', mb: 2 }}>
-                          <CompanyAvatar bgColor={experience.color}>
-                            <span role="img" aria-label={experience.company}>{experience.icon}</span>
+                          <CompanyAvatar bgColor={experience.logo ? "#fff" : experience.color}>
+                            {experience.logo ? (
+                              <Box
+                                component="img"
+                                src={experience.logo}
+                                alt={`${experience.company} logo`}
+                                sx={{ width: "100%", height: "100%", objectFit: "contain" }}
+                              />
+                            ) : (
+                              <span role="img" aria-label={experience.company}>{experience.icon}</span>
+                            )}
                           </CompanyAvatar>
                           
                           <Typography variant="h5" sx={{ 
