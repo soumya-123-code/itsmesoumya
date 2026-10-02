@@ -16,16 +16,28 @@ export default function Intro() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
+        position: "relative",
+        isolation: "isolate",
         bgcolor: theme.palette.background.default,
+        background: theme.palette.mode === "dark"
+          ? "radial-gradient(circle at 32% 26%, rgba(120, 59, 220, .18), transparent 31%), radial-gradient(circle at 78% 68%, rgba(91, 34, 167, .12), transparent 34%), #11071f"
+          : "radial-gradient(circle at 30% 24%, rgba(154, 102, 244, .15), transparent 31%), radial-gradient(circle at 75% 66%, rgba(235, 219, 255, .55), transparent 38%), #ffffff",
         overflow: "hidden",
       }}
     >
-      <Box sx={{ position: "relative", width: { xs: "100%", sm: "88vw", md: "min(72vw, 950px)" }, maxWidth: "100%" }}>
+      <Box sx={{ position: "relative", zIndex: 1, width: { xs: "100%", sm: "88vw", md: "min(72vw, 950px)" }, maxWidth: "100%" }}>
         <Box
           component="img"
           src={`${process.env.PUBLIC_URL}${heroImageSrc}`}
           alt="Soumya holding a MacBook"
-          sx={{ display: "block", width: "100%", height: "auto" }}
+          sx={{
+            display: "block",
+            width: "100%",
+            height: "auto",
+            filter: theme.palette.mode === "dark"
+              ? "drop-shadow(0 24px 34px rgba(0, 0, 0, .32))"
+              : "drop-shadow(0 22px 34px rgba(80, 38, 144, .18))",
+          }}
         />
         <Box
           component="span"
@@ -59,6 +71,7 @@ export default function Intro() {
         sx={{
           width: { xs: "calc(100% - 40px)", sm: "88vw", md: "min(72vw, 950px)" },
           maxWidth: "100%",
+          zIndex: 1,
           color: theme.palette.text.primary,
           pb: { xs: 8, md: 12 },
           mt: { xs: 2, md: 1 },
