@@ -17,6 +17,9 @@ export default function Intro() {
         flexDirection: "column",
         alignItems: "center",
         position: "relative",
+        width: "100vw",
+        maxWidth: "none",
+        marginLeft: "calc(50% - 50vw)",
         isolation: "isolate",
         bgcolor: theme.palette.mode === "dark" ? "#10051d" : theme.palette.background.default,
         backgroundImage: theme.palette.mode === "dark"
