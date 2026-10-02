@@ -24,7 +24,7 @@ const textOptions = [
 ];
 
 // Resume PDF path - update this to your actual resume file path
-const RESUME_PATH = "/assets/Soumya_Ranjan_Nayak_CV_2025.pdf";
+const RESUME_PATH = "/assets/Soumya_Ranjan_Nayak_CV_2025.pdf?v=1";
 
 // Styled components for animations
 const AnimatedBox = styled(Box)(
@@ -495,7 +495,7 @@ const About = memo(() => {
     { emoji: "✉️", text: "soumya050794@gmail.com" },
     { emoji: "📞", text: "+91 9438509060" },
     { emoji: "📍", text: "Rourkela, Odisha, India" },
-    { emoji: "⚡", text: "5+ Years Experience" }
+    { emoji: "⚡", text: "6+ Years Experience" }
   ];
 
   // Dynamic skill categories with emojis
@@ -803,7 +803,7 @@ const About = memo(() => {
             </Typography>
 
             <Typography paragraph sx={{ mb: 2 }}>
-              I'm a Senior Full-Stack Developer with 5+ years of experience in
+              I'm a Senior Full-Stack Developer with 6+ years of experience in
               React.js and React Native.
             </Typography>
 
