@@ -42,16 +42,19 @@ export default function Intro() {
       <Box sx={{ position: "relative", zIndex: 1, maxWidth: 1040, mx: "auto" }}>
         <Box sx={{ display: "grid", gridTemplateColumns: { xs: "1fr", md: "248px minmax(0, 1fr)" }, alignItems: "center", maxWidth: 760, mx: "auto", gap: { xs: 3.5, md: 4.5 } }}>
           <Box sx={{ position: "relative", justifySelf: { xs: "center", md: "end" }, pt: { md: 3 } }}>
-            <Box sx={{ position: "absolute", top: -25, right: -40, color: palette.line, fontFamily: "cursive", fontSize: "2rem", transform: "rotate(-22deg)" }}>↗</Box>
+            <Box sx={{ position: "absolute", zIndex: 2, top: { xs: -52, md: -40 }, left: { xs: "50%", md: 174 }, transform: { xs: "translateX(-50%)", md: "none" }, width: "max-content", color: palette.muted, fontSize: { xs: ".95rem", md: "1.05rem" }, whiteSpace: "nowrap" }}>
+              Hello! I Am <PurpleText>Soumya</PurpleText>
+            </Box>
+            <Box component="svg" viewBox="0 0 330 180" aria-hidden="true" sx={{ position: "absolute", zIndex: 1, width: { xs: 180, md: 300 }, height: { xs: 100, md: 165 }, top: { xs: -21, md: -29 }, left: { xs: "-2%", md: 102 }, overflow: "visible", pointerEvents: "none" }}>
+              <path d="M 316 28 C 210 25, 120 50, 77 139" fill="none" stroke={palette.line} strokeWidth="1.8" strokeLinecap="round" />
+              <path d="M 68 126 L 77 139 L 88 130" fill="none" stroke={palette.line} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+            </Box>
             <Box sx={{ width: { xs: 205, md: 230 }, height: { xs: 205, md: 230 }, borderRadius: "50%", overflow: "hidden", display: "flex", alignItems: "end", justifyContent: "center", bgcolor: palette.avatar, border: `1px solid ${palette.line}`, boxShadow: `0 0 0 15px ${dark ? "rgba(72, 27, 128, .20)" : "rgba(153, 104, 245, .10)"}, 0 15px 48px ${palette.glow}` }}>
               <Box component="img" src={`${process.env.PUBLIC_URL}/assets/soumya-hero-profile-v5.png`} alt="Soumya holding a laptop" sx={{ width: "126%", maxWidth: "none", transform: "translate(3%, 8%)" }} />
             </Box>
           </Box>
 
           <Box sx={{ textAlign: { xs: "center", md: "left" } }}>
-            <Typography sx={{ color: palette.muted, fontSize: { xs: "1rem", md: "1.16rem" }, mb: 1.9 }}>
-              Hello! I Am <PurpleText>Soumya</PurpleText>
-            </Typography>
             <Typography sx={{ textDecoration: "underline", textDecorationThickness: "1px", textUnderlineOffset: "7px", fontSize: { xs: "1rem", md: "1.18rem" }, mb: .9 }}>
               A Developer who
             </Typography>
