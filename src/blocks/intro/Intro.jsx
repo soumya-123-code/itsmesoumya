@@ -18,10 +18,10 @@ export default function Intro() {
         alignItems: "center",
         position: "relative",
         isolation: "isolate",
-        bgcolor: theme.palette.background.default,
-        background: theme.palette.mode === "dark"
-          ? "radial-gradient(circle at 32% 26%, rgba(120, 59, 220, .18), transparent 31%), radial-gradient(circle at 78% 68%, rgba(91, 34, 167, .12), transparent 34%), #11071f"
-          : "radial-gradient(circle at 30% 24%, rgba(154, 102, 244, .15), transparent 31%), radial-gradient(circle at 75% 66%, rgba(235, 219, 255, .55), transparent 38%), #ffffff",
+        bgcolor: theme.palette.mode === "dark" ? "#10051d" : theme.palette.background.default,
+        backgroundImage: theme.palette.mode === "dark"
+          ? "none"
+          : "radial-gradient(circle at 30% 24%, rgba(154, 102, 244, .15), transparent 31%), radial-gradient(circle at 75% 66%, rgba(235, 219, 255, .55), transparent 38%)",
         overflow: "hidden",
       }}
     >
@@ -35,7 +35,7 @@ export default function Intro() {
             width: "100%",
             height: "auto",
             filter: theme.palette.mode === "dark"
-              ? "drop-shadow(0 24px 34px rgba(0, 0, 0, .32))"
+              ? "none"
               : "drop-shadow(0 22px 34px rgba(80, 38, 144, .18))",
           }}
         />
