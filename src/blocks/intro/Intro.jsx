@@ -46,11 +46,11 @@ export default function Intro() {
               Hello! I Am <PurpleText>Soumya</PurpleText>
             </Box>
             <Box component="svg" viewBox="0 0 330 180" aria-hidden="true" sx={{ position: "absolute", zIndex: 1, width: { xs: 180, md: 300 }, height: { xs: 100, md: 165 }, top: { xs: -21, md: -29 }, left: { xs: "-2%", md: 102 }, overflow: "visible", pointerEvents: "none" }}>
-              <path d="M 316 28 C 210 25, 120 50, 77 139" fill="none" stroke={palette.line} strokeWidth="1.8" strokeLinecap="round" />
-              <path d="M 68 126 L 77 139 L 88 130" fill="none" stroke={palette.line} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M 316 28 C 226 21, 151 28, 109 50" fill="none" stroke={palette.line} strokeWidth="1.8" strokeLinecap="round" />
+              <path d="M 96 43 L 109 50 L 99 61" fill="none" stroke={palette.line} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
             </Box>
             <Box sx={{ width: { xs: 205, md: 230 }, height: { xs: 205, md: 230 }, borderRadius: "50%", overflow: "hidden", display: "flex", alignItems: "end", justifyContent: "center", bgcolor: palette.avatar, border: `1px solid ${palette.line}`, boxShadow: `0 0 0 15px ${dark ? "rgba(72, 27, 128, .20)" : "rgba(153, 104, 245, .10)"}, 0 15px 48px ${palette.glow}` }}>
-              <Box component="img" src={`${process.env.PUBLIC_URL}/assets/soumya-hero-profile-v6.png`} alt="Soumya holding a laptop" sx={{ width: "126%", maxWidth: "none", transform: "translate(3%, 8%)" }} />
+              <Box component="img" src={`${process.env.PUBLIC_URL}/assets/soumya-hero-profile-v6.png`} alt="Soumya holding a laptop" sx={{ width: "105%", maxWidth: "none", transform: "translate(1%, 7%)" }} />
             </Box>
           </Box>
 
